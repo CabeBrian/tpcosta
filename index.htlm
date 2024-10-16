@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación: Circuitos Administrativos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2C3E50;
+            margin: 0;
+            padding: 20px;
+            color: #ECF0F1;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #34495E;
+            padding: 30px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #F1C40F;
+            font-size: 2em;
+        }
+        h3 {
+            color: #E67E22;
+            font-size: 1.5em;
+        }
+        p, li {
+            font-size: 1.2em;
+        }
+        ul {
+            margin: 15px 0;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        .buttons {
+            margin-top: 30px;
+            text-align: center;
+        }
+        button {
+            background-color: #E74C3C;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+        button:hover {
+            background-color: #C0392B;
+        }
+        button:disabled {
+            background-color: #7F8C8D;
+            cursor: not-allowed;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border: 5px solid #ECF0F1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Circuitos Administrativos y Normas de Control Interno</h1>
+
+        <!-- Secciones de la presentación -->
+        <div class="section active" id="section1">
+            <h2>Operaciones Básicas de una Empresa</h2>
+            <ul>
+                <li>Compras</li>
+                <li>Ventas</li>
+                <li>Pagos</li>
+                <li>Cobranzas</li>
+                <li>Producción</li>
+                <li>Liquidación de sueldos y jornales</li>
+            </ul>
+        </div>
+
+        <div class="section" id="section2">
+            <h2>Control Interno</h2>
+            <p>El control es un subsistema corporativo que garantiza que la contabilidad de la empresa sea precisa y minimiza la probabilidad de errores o fraudes.</p>
+            <h3>Características del Control Interno:</h3>
+            <ul>
+                <li>No es solo un manual de procedimientos.</li>
+                <li>Provee seguridad razonable.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="section3">
+            <h2>Circuito Administrativo de Compras</h2>
+            <p>El circuito de compras abarca desde la detección de la necesidad de adquirir un bien o servicio hasta la adquisición.</p>
+            <h3>Sectores participantes:</h3>
+            <ul>
+                <li>Proveedor</li>
+                <li>Recepción</li>
+                <li>Compras</li>
+                <li>Almacenes</li>
+                <li>Contaduría</li>
+            </ul>
+        </div>
+
+        <!-- Sección de imágenes -->
+        <div class="section" id="section9">
+            <h2>Diagrama de Flujo</h2>
+            <img src="DIAGRAMA_TP.jpg" alt="Diagrama de Flujo del Proceso Administrativo">
+        </div>
+
+        <div class="section" id="section10">
+            <h2>Cheque Común</h2>
+            <img src="cheque_comun.gif" alt="Cheque Común en Argentina">
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="buttons">
+            <button id="prevBtn" onclick="prevSection()">Anterior</button>
+            <button id="nextBtn" onclick="nextSection()">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSection = 1;
+        const totalSections = 10;
+
+        function showSection(sectionNumber) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(`section${sectionNumber}`).classList.add('active');
+            
+            // Control de botones
+            document.getElementById('prevBtn').disabled = sectionNumber === 1;
+            document.getElementById('nextBtn').disabled = sectionNumber === totalSections;
+        }
+
+        function nextSection() {
+            if (currentSection < totalSections) {
+                currentSection++;
+                showSection(currentSection);
+            }
+        }
+
+        function prevSection() {
+            if (currentSection > 1) {
+                currentSection--;
+                showSection(currentSection);
+            }
+        }
+    </script>
+
+</body>
+</html>
 
