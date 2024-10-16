@@ -114,12 +114,12 @@
         <!-- Sección de imágenes -->
         <div class="section" id="section9">
             <h2>Diagrama de Flujo</h2>
-            <img src="DIAGRAMA_TP.jpg" alt="Diagrama de Flujo del Proceso Administrativo">
+            <img src="DIAGRAMA_TP.drawio.jpg" alt="Diagrama de Flujo del Proceso Administrativo">
         </div>
 
         <div class="section" id="section10">
             <h2>Cheque Común</h2>
-            <img src="cheque_comun.gif" alt="Cheque Común en Argentina">
+            <img src="cheque_comun_argentina.gif" alt="Cheque Común en Argentina">
         </div>
 
         <!-- Botones de navegación -->
