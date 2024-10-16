@@ -7,29 +7,22 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #2C3E50; /* Fondo oscuro pero no totalmente negro */
+            background-color: #f4f4f4;
             margin: 0;
             padding: 20px;
-            color: #ECF0F1; /* Color de texto claro */
         }
         .container {
-            max-width: 900px; /* Sección un poco más grande para mayor legibilidad */
+            max-width: 800px;
             margin: auto;
-            background-color: #34495E; /* Fondo oscuro para la caja */
-            padding: 30px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #F1C40F; /* Títulos en amarillo para contrastar con el fondo */
-            font-size: 2em; /* Títulos un poco más grandes */
+            color: #2C3E50;
         }
         h3 {
-            color: #E67E22; /* Subtítulos en un naranja claro */
-            font-size: 1.5em;
-        }
-        p, li {
-            font-size: 1.2em; /* Texto más grande para facilitar la lectura */
+            color: #2980B9;
         }
         ul {
             margin: 15px 0;
@@ -41,32 +34,25 @@
             display: block;
         }
         .buttons {
-            margin-top: 30px;
+            margin-top: 20px;
             text-align: center;
         }
         button {
-            background-color: #E74C3C; /* Botones en rojo */
+            background-color: #2980B9;
             color: white;
             border: none;
-            padding: 15px 30px; /* Botones más grandes */
+            padding: 10px 20px;
             cursor: pointer;
             margin: 5px;
-            border-radius: 8px;
-            font-size: 1.2em; /* Texto de los botones más grande */
+            border-radius: 5px;
+            font-size: 16px;
         }
         button:hover {
-            background-color: #C0392B; /* Cambia de tono al pasar el mouse */
+            background-color: #3498DB;
         }
         button:disabled {
-            background-color: #7F8C8D;
+            background-color: #bdc3c7;
             cursor: not-allowed;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 20px auto;
-            border: 5px solid #ECF0F1; /* Un borde claro para las imágenes */
         }
     </style>
 </head>
@@ -159,17 +145,6 @@
             <p>Este circuito incluye la liquidación de salarios, el pago, y el registro contable asociado.</p>
         </div>
 
-        <!-- Sección de imágenes -->
-        <div class="section" id="section9">
-            <h2>Diagrama de Flujo</h2>
-            <img src="DIAGRAMA TP.drawio.jpg" alt="Diagrama de Flujo del Proceso Administrativo">
-        </div>
-
-        <div class="section" id="section10">
-            <h2>Cheque Común</h2>
-            <img src="cheque_comun_argentina.gif" alt="Cheque Común en Argentina">
-        </div>
-
         <!-- Botones de navegación -->
         <div class="buttons">
             <button id="prevBtn" onclick="prevSection()" disabled>Anterior</button>
@@ -179,7 +154,7 @@
 
     <script>
         let currentSection = 1;
-        const totalSections = 10;
+        const totalSections = 8;
 
         function showSection(sectionNumber) {
             // Ocultar todas las secciones
