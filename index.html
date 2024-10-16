@@ -54,6 +54,12 @@
             background-color: #bdc3c7;
             cursor: not-allowed;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
@@ -145,6 +151,17 @@
             <p>Este circuito incluye la liquidación de salarios, el pago, y el registro contable asociado.</p>
         </div>
 
+        <!-- Sección de imágenes -->
+        <div class="section" id="section9">
+            <h2>Diagrama de Flujo</h2>
+            <img src="DIAGRAMA TP.drawio.jpg" alt="Diagrama de Flujo del Proceso Administrativo">
+        </div>
+
+        <div class="section" id="section10">
+            <h2>Cheque Común</h2>
+            <img src="cheque_comun_argentina.gif" alt="Cheque Común en Argentina">
+        </div>
+
         <!-- Botones de navegación -->
         <div class="buttons">
             <button id="prevBtn" onclick="prevSection()" disabled>Anterior</button>
@@ -154,7 +171,7 @@
 
     <script>
         let currentSection = 1;
-        const totalSections = 8;
+        const totalSections = 10;
 
         function showSection(sectionNumber) {
             // Ocultar todas las secciones
